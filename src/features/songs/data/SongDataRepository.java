@@ -1,12 +1,13 @@
-package domain;
+package features.songs.data;
+
+import features.songs.domain.Song;
+import features.songs.domain.SongRepository;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class GetSongsUseCase {
-
-    public ArrayList<Song> execute(){
-
+public class SongDataRepository implements SongRepository {
+    @Override
+    public ArrayList<Song> findAll() {
         Song song1 = new Song();
         song1.setId("1");
         song1.setTitle("Macarena");
@@ -24,6 +25,7 @@ public class GetSongsUseCase {
         songs.add(song2);
 
         return songs;
-
     }
+
+
 }
