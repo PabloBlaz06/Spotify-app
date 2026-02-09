@@ -9,7 +9,7 @@ public class AuthorDataRepository implements AuthorRepository {
 
     private AuthorMemLocalDataSource authorMemLocalDataSource;
 
-    public AuthorDataRepository(AuthorMemLocalDataSource authorMemLocalDataSource) {
+    public AuthorDataRepository(AuthorMemLocalDataSource authorMemLocalDataSource, AuthorApiLocalDataSource authorApiLocalDataSource) {
         this.authorMemLocalDataSource = authorMemLocalDataSource;
     }
 
