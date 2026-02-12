@@ -3,16 +3,17 @@ package features.authors.domain;
 public class Author {
 
     private String id;
-    private String  name;
+    private String name;
     private String bornDate;
-    private String nacionality;
+    private String nationality;
 
-    public Author(String id, String name, String bornDate, String nacionality) {
+    public Author(String id, String name, String bornDate, String nationality) {
         this.id = id;
         this.name = name;
         this.bornDate = bornDate;
-        this.nacionality = nacionality;
+        this.nationality = nationality;
     }
+
 
     public String getId() {
         return id;
@@ -38,11 +39,11 @@ public class Author {
         this.bornDate = bornDate;
     }
 
-    public String getNacionality() {
-        return nacionality;
+    public String getNationality() {
+        return nationality;
     }
 
-    public void setNacionality(String nacionality) {
-        this.nacionality = nacionality;
+    public void setNationality(String nationality) {
+        this.nationality = nationality;
     }
 }

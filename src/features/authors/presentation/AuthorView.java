@@ -4,6 +4,7 @@ import features.authors.data.AuthorApiLocalDataSource;
 import features.authors.data.AuthorDataRepository;
 import features.authors.data.AuthorMemLocalDataSource;
 import features.authors.domain.Author;
+import features.authors.domain.AuthorRepository;
 import features.authors.domain.GetAuthorsUseCase;
 import features.songs.data.SongDataRepository;
 
@@ -15,7 +16,7 @@ public class AuthorView {
         GetAuthorsUseCase getAuthorsUseCase = new GetAuthorsUseCase(
                 new AuthorDataRepository(
                         new AuthorMemLocalDataSource(),
-                        new AuthorApiLocalDataSource());
+                        new AuthorApiLocalDataSource()));
 
         ArrayList<Author> authors = getAuthorsUseCase.execute();
         System.out.println(authors);
